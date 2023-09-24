@@ -55,6 +55,11 @@ async function airdropSolIfNeeded(
   }
 }
 
+export async function createUser(){
+    const signer = Web3.Keypair.generate();
+    return signer;
+}
+
 async function pingProgram(connection: Web3.Connection, payer: Web3.Keypair) {
   const transaction = new Web3.Transaction()
   const instruction = new Web3.TransactionInstruction({

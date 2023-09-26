@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 
 const app = express();
-const PORT = 3001;
+const PORT = 3000;
 
 // 使用 body-parser 中间件来解析 JSON 请求体
 app.use(bodyParser.json());

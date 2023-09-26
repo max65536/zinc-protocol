@@ -1,33 +1,12 @@
 
 import {
-  CHAIN_ID_BSC,
   CHAIN_ID_ETH,
-  CHAIN_ID_SOLANA,
-  redeemOnEth,
-  WSOL_ADDRESS,
 } from "@certusone/wormhole-sdk";
-import {
-  ASSOCIATED_TOKEN_PROGRAM_ID,
-  Token,
-  TOKEN_PROGRAM_ID,
-} from "@solana/spl-token";
-import { PublicKey } from "@solana/web3.js";
-import {
-  ETH_TEST_WALLET_PUBLIC_KEY,
-  getSignerForChain,
-  getTokenBridgeAddressForChain,
-  SOLANA_TEST_TOKEN,
-  SOLANA_TEST_WALLET_PUBLIC_KEY,
-  WETH_ADDRESS,
-} from "./consts";
-
 import { NodeHttpTransport } from "@improbable-eng/grpc-web-node-http-transport";
 import { getEmitterAddressEth } from "@certusone/wormhole-sdk";
 import * as Web3 from "@solana/web3.js"
-import * as bs58 from "bs58";
 import getSignedVAAWithRetry from "@certusone/wormhole-sdk/lib/cjs/rpc/getSignedVAAWithRetry";
 import { postVaaSolana, redeemOnSolana } from "@certusone/wormhole-sdk";
-import * as fs from 'fs';
 
 
 const MAINNET_GUARDIAN_RPC: string[] =  [

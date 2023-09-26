@@ -9,6 +9,7 @@
     "test": "ts-node src/test.ts",
     "test2": "ts-node src/test2.ts",
     "test3": "ts-node src/test3.ts",
+    "test4": "ts-node src/test4.ts",
     "server": "ts-node src/server.ts"
   },
   "keywords": [],

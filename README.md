@@ -11,6 +11,7 @@ In the rapidly evolving world of blockchain and cryptocurrencies, the ability to
 
 
 ## **Core Components**
+![image](https://github.com/max65536/zinc-protocol/blob/main/zinc%20protocol%20image/1.png)
 
 When users interact with the Zinc Protocol, the DepositContract stores the user's EVM address and the amount of ETH sent. Based on the user's requirements, it then iterates through various cross-chain bridges to find the most optimal cross-chain path. Once the best path is identified, the DepositContract calls the corresponding cross-chain bridge contract, passing in the amount of ETH from the user and subsequently receives a unique VAA. Using the user's EVM address, the amount of ETH sent, and the VAA for each transaction, the Zinc Protocol generates a Proof. This Proof ensures the security of the user's cross-chain amount. 
 

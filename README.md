@@ -9,6 +9,14 @@ An intent-centric cross-chain transaction protocol
 In the rapidly evolving world of blockchain and cryptocurrencies, the ability to seamlessly transact across different networks has become imperative. The Zinc Protocol is an innovative platform designed to ease cross-chain transactions for users, bridging the gap between various blockchain networks such as Ethereum and Solana. With Zinc Protocol, users no longer have to grapple with the intricacies of identifying suitable cross-chain bridges or decentralized exchanges. Instead, they simply express their intent, and Zinc handles the rest.
 
 
+
+## **Core Components**
+
+When users interact with the Zinc Protocol, the DepositContract stores the user's EVM address and the amount of ETH sent. Based on the user's requirements, it then iterates through various cross-chain bridges to find the most optimal cross-chain path. Once the best path is identified, the DepositContract calls the corresponding cross-chain bridge contract, passing in the amount of ETH from the user and subsequently receives a unique VAA. Using the user's EVM address, the amount of ETH sent, and the VAA for each transaction, the Zinc Protocol generates a Proof. This Proof ensures the security of the user's cross-chain amount. 
+
+After generating the Proof, the Zinc Protocol on Solana swaps the user's ETH for the desired token. The protocol iterates through various DEXs to find the most optimal trading path. Once the best path is located, the WithdrawContract calls the respective DEX contract to swap the ETH for the corresponding token. Concurrently, the Zinc Protocol assists the user in creating a wallet, transferring the final tokens into the user's newly created wallet.
+
+
 ## **Features 🌟**
 
 ### **Declarative Intent 📜**

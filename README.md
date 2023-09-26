@@ -1,13 +1,12 @@
 # **Zinc Protocol 🌉**
 
-Simplifying Cross-Chain Transactions in a Decentralized World.
+An intent-centric cross-chain transaction protocol
 
 
 
 ## **Introduction**
 
-In the rapidly evolving world of blockchain and cryptocurrencies, the ability to seamlessly transact across different networks has become imperative. The Zinc Protocol is designed to bridge this gap, making cross-chain transactions a breeze.
-
+In the rapidly evolving world of blockchain and cryptocurrencies, the ability to seamlessly transact across different networks has become imperative. The Zinc Protocol is an innovative platform designed to ease cross-chain transactions for users, bridging the gap between various blockchain networks such as Ethereum and Solana. With Zinc Protocol, users no longer have to grapple with the intricacies of identifying suitable cross-chain bridges or decentralized exchanges. Instead, they simply express their intent, and Zinc handles the rest.
 
 
 ## **Features 🌟**

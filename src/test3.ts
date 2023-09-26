@@ -60,7 +60,6 @@ async function main() {
 //     signedVaa
 //   );
 
-    // const secret = '2tmUNacCW3bXxVaba49WZNgT9mbYYjgoYu4CGNBPYqrarTU74mKzmV4Z8G9fSLQaNujZjdk4kt6e4NtibZXCbxYS'
     const secret = process.env.SOL_MAINNET_KEY ?? '';
     let secretKey = base58.decode(secret);
     const keypairFromSecret = Web3.Keypair.fromSecretKey(secretKey);

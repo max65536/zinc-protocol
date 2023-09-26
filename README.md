@@ -1,5 +1,33 @@
-# Solana Scripting Template
+# **Zinc Protocol 🌉**
 
-This template is a starting point for writing scripts to interact with the Solana blockchain. Simply add your code to `index.ts` and run `npm start`.
+Simplifying Cross-Chain Transactions in a Decentralized World.简化去中心化世界中的跨链交易。
 
-You can create a local repository with this starter code using the `npx create-solana-client [PROJECT_NAME] --initialize-keypair` command in the terminal.
+---
+
+## **Introduction**
+
+In the rapidly evolving world of blockchain and cryptocurrencies, the ability to seamlessly transact across different networks has become imperative. The Zinc Protocol is designed to bridge this gap, making cross-chain transactions a breeze.
+
+---
+
+## **Features 🌟**
+
+### **Declarative Intent 📜**
+
+- Express your transactional intent without delving into the complexities. Simply state your end goal, and Zinc does the rest.
+
+### **User-centric Approach 🚀**
+
+- Designed with users in mind. From novices to crypto veterans, Zinc ensures a smooth and intuitive experience.
+
+### **Safety First 🔒**
+
+- Prioritizing your digital assets' security. With best-in-class security practices, your assets are in safe hands.
+
+### **Cost and Speed Optimization ⚡**
+
+- Swift cross-chain swaps without burning a hole in your pocket.
+
+### **Collaborative Ecosystem 🌐**
+
+- Built with a wide range of collaborations in the blockchain universe, ensuring compatibility and ease of operation.

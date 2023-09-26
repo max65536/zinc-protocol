@@ -1,14 +1,14 @@
 # **Zinc Protocol 🌉**
 
-Simplifying Cross-Chain Transactions in a Decentralized World.简化去中心化世界中的跨链交易。
+Simplifying Cross-Chain Transactions in a Decentralized World.
 
----
+
 
 ## **Introduction**
 
 In the rapidly evolving world of blockchain and cryptocurrencies, the ability to seamlessly transact across different networks has become imperative. The Zinc Protocol is designed to bridge this gap, making cross-chain transactions a breeze.
 
----
+
 
 ## **Features 🌟**
 

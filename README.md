@@ -18,6 +18,15 @@ When users interact with the Zinc Protocol, the DepositContract stores the user'
 After generating the Proof, the Zinc Protocol on Solana swaps the user's ETH for the desired token. The protocol iterates through various DEXs to find the most optimal trading path. Once the best path is located, the WithdrawContract calls the respective DEX contract to swap the ETH for the corresponding token. Concurrently, the Zinc Protocol assists the user in creating a wallet, transferring the final tokens into the user's newly created wallet.
 
 
+
+## **Usage Example**
+![image](https://github.com/max65536/zinc-protocol/blob/main/zinc%20protocol%20image/2.png)
+
+For example, users need to perform cross-chain transactions and only have ETH but not Sol, they simply need to use the Zinc Protocol. With just one click, the transaction is completed.
+
+Suppose 1 ETH = 1600 USDC. Users submit their requirement to the Zinc Protocol to swap 1 ETH on Ethereum for 1600 USDC on Solana. This request is then processed by the Zinc Protocol, which uses its own contracts to assist users in the cross-chain transfer and swap. Ultimately, it helps users acquire 1600 USDC on Solana
+
+
 ## **Features 🌟**
 
 ### **Declarative Intent 📜**

@@ -49,3 +49,53 @@ export async function swapETH(connection:Connection, owner:Keypair){
     console.warn(err);
   }
 }
+
+export async function swapETHToSOL(connection:Connection, owner:Keypair, ethAmount:Decimal){
+  const orca = getOrca(connection, Network.DEVNET);
+  try {
+    /*** Swap ***/
+//    const orcaSolPool = orca.getPool(OrcaPoolConfig.ORCA_SOL);
+//    const solToken = orcaSolPool.getTokenB();
+
+    const ethSolPool = orca.getPool(OrcaPoolConfig.ETH_SOL);
+    const solToken = ethSolPool.getTokenB();
+    const ethToken = ethSolPool.getTokenA();
+//    const solAmount = ETHamount
+    console.log(orca)
+    const quote = await ethSolPool.getQuote(ethToken, ethAmount);
+    const solAmount = quote.getMinOutputAmount();
+
+    console.log(`Swap ${ethAmount.toString()} ETH for at least ${solAmount.toNumber()} SOL`);
+    const swapPayload = await ethSolPool.swap(owner, ethToken, ethAmount, solAmount);
+    const swapTxId = await swapPayload.execute();
+    console.log("Swapped:", swapTxId, "\n");
+
+  } catch (err) {
+    console.warn(err);
+  }
+}
+
+export async function swapWETHToSOL(connection:Connection, owner:Keypair, wethAmount:Decimal){
+  const orca = getOrca(connection, Network.MAINNET);
+  try {
+    /*** Swap ***/
+//    const orcaSolPool = orca.getPool(OrcaPoolConfig.ORCA_SOL);
+//    const solToken = orcaSolPool.getTokenB();
+
+    const wethSolPool = orca.getPool(OrcaPoolConfig.whETH_SOL);
+    const solToken = wethSolPool.getTokenB();
+    const wethToken = wethSolPool.getTokenA();
+//    const solAmount = ETHamount
+    console.log(orca)
+    const quote = await wethSolPool.getQuote(wethToken, wethAmount);
+    const solAmount = quote.getMinOutputAmount();
+
+    console.log(`Swap ${wethAmount.toString()} ETH for at least ${solAmount.toNumber()} SOL`);
+    const swapPayload = await wethSolPool.swap(owner, wethToken, wethAmount, solAmount);
+    const swapTxId = await swapPayload.execute();
+    console.log("Swapped:", swapTxId, "\n");
+
+  } catch (err) {
+    console.warn(err);
+  }
+}

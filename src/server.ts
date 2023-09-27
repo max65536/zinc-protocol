@@ -1,16 +1,20 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import {all_process} from './all_process'
+
+import cors from 'cors'
 
 const app = express();
 const PORT = 3000;
 
-// 使用 body-parser 中间件来解析 JSON 请求体
 app.use(bodyParser.json());
+app.use(cors());
 
-app.post('/userinfo', (req, res) => {
+app.post('/userinfo', async (req, res) => {
   console.log(req.body);
-  const data = req.body;
+  const data = req.body
   res.send('Data received!');
+  await all_process(data['sequence'], data['userAddress'], data['amount']);
 });
 
 app.listen(PORT, () => {

@@ -22,6 +22,29 @@ export async function initUserFromEnv(connection: Web3.Connection): Promise<Web3
   return keypairFromSecret;
 }
 
+export async function initUserFromETHFile(ethaddress:string): Promise<Web3.Keypair> {
+  // 如果没有私钥，生成新密钥对
+  const filePath = "keys/ETH_"+ethaddress
+  if (!fs.existsSync(filePath)){
+    
+    console.log('正在生成新密钥对... 🗝️');
+    const signer = Web3.Keypair.generate();
+    console.log('正在创建文件');
+    fs.writeFileSync(filePath, signer.secretKey.toString());
+    return signer;
+  }
+
+  const privateKeyString = fs.readFileSync(filePath, 'utf-8');
+
+  // 将字符串转换为数字数组
+  const secret: number[] = privateKeyString.split(',').map(Number);
+  const secretKey = Uint8Array.from(secret);
+  const keypairFromSecret = Web3.Keypair.fromSecretKey(secretKey);
+  return keypairFromSecret;
+}
+
+
+
 export async function airdropSolIfNeeded(
   signer: Web3.Keypair,
   connection: Web3.Connection

@@ -90,6 +90,7 @@ async function pingProgram(connection: Web3.Connection, payer: Web3.Keypair) {
 
 async function main() {
   const connection = new Web3.Connection(Web3.clusterApiUrl('devnet'));
+  console.log("build a connection!");
   const signer = await initializeKeypair(connection);
   
   await airdropSolIfNeeded(signer, connection);
